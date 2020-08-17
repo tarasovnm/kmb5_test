@@ -2,3 +2,320 @@
 @import "fonts";
 
 @import "global";
+
+.header {
+  color: $white;
+
+  background-color: $dark;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  padding: 10px 0 6px 0;
+
+  &__logo-link {
+    margin-right: 82px;
+  }
+
+  &__button {
+    margin-left: auto;
+    padding: 10px 15px;
+
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 11px;
+    letter-spacing: 1px;
+    color: $white;
+
+    border: 1px solid $white;
+    border-radius: 8px;
+
+    &:hover {
+      color: $black;
+      background-color: $white;
+    }
+  }
+}
+
+.site-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__link {
+    margin: 0 16px;
+    padding: 8px 0;
+    font-size: 14px;
+    line-height: 11px;
+    letter-spacing: 1px;
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+      border-top: 1px solid $white;
+      border-bottom: 1px solid $white;
+    }
+  }
+}
+
+.main-screen {
+  padding-top: 100px;
+  padding-bottom: 122px;
+
+  &__inner {
+    position: relative;
+    max-width: 792px;
+
+    &::after {
+      position: absolute;
+      top: 80px;
+      right: -279px;
+      content: "";
+      width: 279px;
+      height: 222px;
+
+      background-image: url("../img/fuck-you.png");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__question {
+    position: relative;
+    max-width: 525px;
+    margin: 0;
+    padding: 0;
+
+    font-size: 72px;
+    line-height: 100px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    &::after {
+      position: absolute;
+      right: -127px;
+      top: 50px;
+      content: "";
+      display: block;
+      width: 127px;
+      height: 5px;
+      background-color: $black;
+    }
+  }
+
+  &__condolence {
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-size: 100px;
+    line-height: 100px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+
+  &__footnote {
+    margin: 0 0 50px 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 24px;
+    color: #7f7f7f;
+  }
+
+  &__button {
+    padding: 12px 95px;
+
+    font-size: 30px;
+    line-height: 100px;
+    font-weight: bold;
+    color: $black;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    border: 3px solid $black;
+    border-radius: 4px;
+
+    &:hover {
+      color: $white;
+      background-color: $dark;
+    }
+  }
+}
+
+.section-title {
+  width: 555px;
+  margin: 0 auto;
+  padding: 5px 0;
+
+  font-size: 72px;
+  line-height: 100px;
+  color: $black;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+
+  background-color: $white;
+
+  &--inverse {
+    color: $white;
+    background-color: $dark;
+  }
+}
+
+.about-us {
+  padding-top: 85px;
+  padding-bottom: 106px;
+
+  color: $white;
+  background-color: $dark;
+
+  &__title {
+    margin-bottom: 120px;
+  }
+
+  &__answer {
+    position: relative;
+    margin: 0;
+    padding: 0 0 0 154px;
+
+    font-size: 72px;
+    line-height: 90px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 40px;
+      width: 127px;
+      height: 5px;
+
+      content: "";
+      background-color: $white;
+    }
+  }
+
+  &__explanation {
+    margin: 0 0 82px 0;
+    padding: 0 0 0 154px;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: 3px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    counter-reset: list-counter;
+  }
+
+  &__item {
+    position: relative;
+    width: 263px;
+    padding-top: 190px;
+    padding-bottom: 75px;
+    text-align: center;
+
+    border: 3px solid $white;
+    counter-increment: list-counter;
+
+    &::before {
+      position: absolute;
+      top: 65px;
+      width: 100%;
+      text-align: center;
+
+      display: block;
+      content: "0" counter(list-counter);
+      font-size: 115px;
+      line-height: 100px;
+      font-weight: 900;
+      letter-spacing: 3px;
+    }
+  }
+
+  &__item-title {
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+
+  &__item-text {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    line-height: 27px;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+}
+
+.cases {
+  padding-top: 99px;
+
+  &__title {
+    margin-bottom: 94px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 361px;
+    height: 361px;
+    font-size: 200px;
+    line-height: 100px;
+    font-weight: bold;
+    color: $white;
+    text-transform: uppercase;
+    background-color: $red;
+
+    &--wide {
+      width: 555px;
+      height: 555px;
+      margin-bottom: 34px;
+      font-size: 400px;
+    }
+  }
+
+  &__text {
+    margin: 82px 0 112px 0;
+    padding: 0;
+
+    font-size: 72px;
+    line-height: 100px;
+    font-weight: bold;
+    color: $red;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+}
+
+.footer {
+  font-size: 15px;
+  line-height: 100px;
+  text-align: center;
+  color: $white;
+  letter-spacing: 1px;
+  background-color: $dark;
+}

@@ -2,6 +2,7 @@
 
 @include font("Arial", "ArialMT");
 @include font("Arial", "Arial-BoldMT", bold);
+@include font("Arial", "Arial-Black", 900);
 
 /* примеры подключения шрифтов 
 @include font("Kaushan Script", "KaushanScript-Regular/KaushanScript-Regular");
