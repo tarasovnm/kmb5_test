@@ -8,6 +8,12 @@ body {
   font-family: $default-font;
 }
 
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
 img {
   max-width: 100%;
   height: auto;
